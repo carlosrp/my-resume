@@ -17,7 +17,7 @@ var bio = {
     "welcomeMessage": "En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor.",
 };
 
-function displayBio() {
+bio.display = function() {
   // Name & role
   var formattedName = HTMLheaderName.replace("%data%", bio.name);
   var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -53,7 +53,7 @@ function displayBio() {
     });
   };
 }
-displayBio();
+bio.display();
 
 //
 // Work Experience
@@ -87,7 +87,7 @@ var work = {
   ]
 };
 
-function displayWork( ) {
+work.display = function() {
   for( job in work.jobs ) {
     $("#workExperience").append(HTMLworkStart);
     var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -102,7 +102,7 @@ function displayWork( ) {
     $(".work-entry:last").append(formattedDescription);
   };
 }
-displayWork();
+work.display();
 
 function locationizer(work_obj) {
   var locs_arr = [];
@@ -202,7 +202,7 @@ var education = {
 //
 // Education - Schools
 //
-function displaySchoolsEducation () {
+education.displaySchools = function() {
   education.schools.forEach( function( element ) {
     $("#education").append(HTMLschoolStart);
     var formattedSchoolandDegree = HTMLschoolName.replace("%data%", element.name) +
@@ -216,12 +216,12 @@ function displaySchoolsEducation () {
     $(".education-entry:last").append(formattedSchoolMajor);
   });
 }
-displaySchoolsEducation();
+education.displaySchools();
 
 //
 // Education - Online
 //
-function displayOnlineEducation() {
+education.displayOnline = function() {
   //
   // Check first if the list is not empty, so we  show the
   // <h3>Online Courses</h3> only if it's not empty.
@@ -239,7 +239,7 @@ function displayOnlineEducation() {
     });
   }
 };
-displayOnlineEducation();
+education.displayOnline();
 
 function inName(name) {
   var tmpname = name.trim().split(" ");

@@ -14,6 +14,19 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  background-color: rgb(235,250,250);
+  background-image:
+    url('../images/1.jpg');
+  background-repeat: repeat;
+  background-position: left top;
+}
+
+#main{
+  max-width: 900px;
+  border-color: rbg(222, 222, 222);
+  margin: 0.75em auto;
+}
 
 .clear-fix {
   overflow: auto;
@@ -27,7 +40,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #403A9A;
   line-height: 48px;
   display: inline;
 }
@@ -72,7 +85,7 @@ h5 {
 
 .nav-item a {
   margin: 0px 20px 0px 20px;
-  color: #4a4a4a;
+  color: #E4E2E2;
 }
 
 .date-text {
@@ -113,25 +126,31 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: #525D5F;
   display: none;
 }
 
 .orange {
-  background-color: #f5ae23;
+  background-color: #403A9A;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #525D5F;
 }
 
 .white-text {
   font-weight: bold;
-  color: #fff;
+  color: #E4E2E2;
 }
 
 .gray {
-  background-color: #f3f3f3;
+  background-color: #E9EAEF;
+  padding-bottom: 20px;
+  clear:both;
+}
+
+.alternate-gray {
+  background-color: #F3F3F5;
   padding-bottom: 10px;
   clear:both;
 }
@@ -141,8 +160,8 @@ a {
 }
 
 /* TODO: Replace with image later */
-#header {
-  background-color: #484848;
+#header, #footerContacts {
+  background-color: #A0A4C3;
 }
 
 .flex-box {
@@ -209,7 +228,7 @@ span {
 
 #map {
   display: block;
-  height: 100%;
+  height: 90%;
   margin: 0 5%;
 }
 
