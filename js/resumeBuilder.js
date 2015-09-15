@@ -32,13 +32,6 @@ bio.display = function() {
   $("#topContacts").append(formattedGithub);
   var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location );
   $("#topContacts").append(formattedLocation);
-  // Footer Contact details
-  var formattedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile );
-  $("#footerContacts").append(formattedMobile);
-  var formattedEmail = HTMLemail.replace("%data%", bio.contacts.email );
-  $("#footerContacts").append(formattedEmail);
-  var formattedGithub = HTMLgithub.replace("%data%", bio.contacts.github );
-  $("#footerContacts").append(formattedGithub);
   // Picture and Welcome message
   var formattedPicture = HTMLbioPic.replace("%data%", bio.photo);
   $("#header").append(formattedPicture);
@@ -267,3 +260,25 @@ var other_locations = [
 //$("#main").append(internationalizeButton);
 
 $("#map-div").append(googleMap);
+
+
+//
+// Footer
+//
+var footer = {
+  "contacts": {
+    "mobile": bio.contacts.mobile,
+    "email": bio.contacts.email,
+    "github": bio.contacts.github
+   }
+};
+footer.display = function() {
+  // Footer Contact details
+  var formattedMobile = HTMLmobile.replace("%data%", footer.contacts.mobile );
+  $("#footerContacts").append(formattedMobile);
+  var formattedEmail = HTMLemail.replace("%data%", footer.contacts.email );
+  $("#footerContacts").append(formattedEmail);
+  var formattedGithub = HTMLgithub.replace("%data%", footer.contacts.github );
+  $("#footerContacts").append(formattedGithub);
+}
+footer.display();
